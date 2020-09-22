@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-class Main{
+class Task{
     public static void main(String[] atgs) {
         intro();
         taskExecutor();
