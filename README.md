@@ -10,3 +10,4 @@ Group: Dp-P028
 * Lesson 2 **Java Core Git**:
     * [Resources to learn Git](https://try.github.io/)
     * [Learn Git Branching](https://learngitbranching.js.org/)
+* Lesson 3 **OOP Intro**
