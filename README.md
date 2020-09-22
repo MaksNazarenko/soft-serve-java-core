@@ -1,6 +1,6 @@
 # SoftServe JavaCore
 ### SoftServe course: Object-oriented programming. Java Core  
-Sept-Oct 2020
+Sept-Oct 2020  
 Group: Dp-P028
 
 
