@@ -16,7 +16,7 @@
     5. Display the total salary of all workers to screen
  */
 
-package com.nazarenko.hw3;
+package com.nazarenko.t1;
 
 public class Task {
 
