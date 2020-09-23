@@ -12,3 +12,4 @@ Group: Dp-P028
     * [Learn Git Branching](https://learngitbranching.js.org/)
 * Lesson 3 **OOP Intro**:
     * [Task 1](https://github.com/MaksNazarenko/soft-serve-java-core/tree/master/l-3/task-1)
+    * [Home work 1](https://github.com/MaksNazarenko/soft-serve-java-core/tree/master/l-3/HW-1)
