@@ -13,3 +13,6 @@ Group: Dp-P028
 * Lesson 3 **OOP Intro**:
     * [Task 1](https://github.com/MaksNazarenko/soft-serve-java-core/tree/master/l-3/task-1)
     * [Home work 1](https://github.com/MaksNazarenko/soft-serve-java-core/tree/master/l-3/HW-1)
+* Lesson 4 **Conditional Statements**:
+    * [Task 1](https://github.com/MaksNazarenko/soft-serve-java-core/tree/master/l-4/t-1/src/com/nazarenko/l4/t1)
+    * [Home work 1]
