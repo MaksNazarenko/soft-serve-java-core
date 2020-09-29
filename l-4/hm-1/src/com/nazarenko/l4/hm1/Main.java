@@ -13,11 +13,35 @@
 package com.nazarenko.l4.hm1;
 
 
+import java.util.Scanner;
+
+import static com.nazarenko.l4.hm1.Dog.secondTask;
 import static com.nazarenko.l4.hm1.FirstTask.firstTask;
 
 public class Main {
     public static void main(String[] args){
-        firstTask();
+        taskManager();
     }
 
+    private static void taskManager(){
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Choose task to execute: " +
+                "\n1 – Check if three values in range [-5;5]" +
+                "\n2 – Check if doggos have same name and find the oldest doggo");
+        int execute = 0;
+        while(execute == 0){
+            execute = scanner.nextInt();
+            if(execute == 1){
+                System.out.println("Start executing first task...\n\n");
+                firstTask();
+                System.out.println("\n\nExecution ended successfully.");
+            } else if(execute == 2){
+                System.out.println("Start executing second task...\n\n");
+                secondTask();
+                System.out.println("\n\nExecution ended successfully.");
+            } else {
+                execute = 0;
+            }
+        }
+    }
 }
