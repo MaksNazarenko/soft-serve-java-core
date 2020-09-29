@@ -1,5 +1,3 @@
-package com.nazarenko;
-
 import java.util.Scanner;
 
 import static com.nazarenko.lesson.description.Description.lessonsDescription;
