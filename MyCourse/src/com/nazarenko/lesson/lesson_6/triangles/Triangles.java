@@ -1,4 +1,4 @@
-package com.nazarenko.lesson.lesson_6;
+package com.nazarenko.lesson.lesson_6.triangles;
 
 import java.util.Scanner;
 
