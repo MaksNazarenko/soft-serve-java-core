@@ -59,20 +59,13 @@ public class Description {
     }
 
     public static void lesson5TaskDescription() {
-        System.out.println(//"Choose task number:\n" +
-                "\n   Error: currently empty.\n");/* +
-                "Press 0 to choose another lesson."); */
-        System.out.print("> ");
-    }
-
-    public static void lesson6TaskDescription() {
         System.out.println("Choose task number:\n" +
                 "   1 – Triangles\n" +
                 "Press 0 to choose another lesson.");
         System.out.print("> ");
     }
 
-    public static void lesson6TrianglesDescription() {
+    public static void lesson5TrianglesDescription() {
         System.out.println("Choose task number:\n" +
                 "   1 – Right Triangle Side Left Top Down\n" +
                 "   2 – Right Triangle Side Right Top Down\n" +
@@ -85,6 +78,13 @@ public class Description {
                 "   9 – ChristmasThree\n" +
                 "   10 – Christmas Three Reverse\n" +
                 "Press 0 to choose another lesson.");
+        System.out.print("> ");
+    }
+
+    public static void lesson6TaskDescription() {
+        System.out.println(//"Choose task number:\n" +
+                "\n   Error: currently empty.\n");/* +
+                "Press 0 to choose another lesson."); */
         System.out.print("> ");
     }
 

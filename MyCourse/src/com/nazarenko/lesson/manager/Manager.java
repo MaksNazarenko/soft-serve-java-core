@@ -9,7 +9,7 @@ import static com.nazarenko.lesson.lesson_3.homework1.L3_HW1.lesson3HomeWork1;
 import static com.nazarenko.lesson.lesson_3.task1.L3_T1.lesson3Task1;
 import static com.nazarenko.lesson.lesson_4.homework1.L4_HW1.lesson4HomeWork1;
 import static com.nazarenko.lesson.lesson_4.task1.L4_T1.lesson4Task1;
-import static com.nazarenko.lesson.lesson_6.triangles.Triangles.lesson6TTriangles;
+import static com.nazarenko.lesson.lesson_5.triangles.Triangles.lesson6TTriangles;
 
 public class Manager {
 
@@ -30,7 +30,7 @@ public class Manager {
                 lesson1Task1();
             } else if (task == 2) {
                 lesson1HomeWork1();
-            } else if(task == 0) {
+            } else if (task == 0) {
                 lesson = Integer.MIN_VALUE;
                 break;
             } else {
@@ -60,7 +60,7 @@ public class Manager {
                 lesson3Task1();
             } else if (task == 2) {
                 lesson3HomeWork1();
-            } else if(task == 0) {
+            } else if (task == 0) {
                 lesson = Integer.MIN_VALUE;
                 break;
             } else {
@@ -83,7 +83,7 @@ public class Manager {
                 lesson4Task1();
             } else if (task == 2) {
                 lesson4HomeWork1();
-            } else if(task == 0) {
+            } else if (task == 0) {
                 lesson = Integer.MIN_VALUE;
                 break;
             } else {
@@ -95,23 +95,16 @@ public class Manager {
     }
 
     public static int lesson5Manager(int task) {
-
-        lesson5TaskDescription();
-
-        return Integer.MIN_VALUE;
-    }
-
-    public static int lesson6Manager(int task) {
         Scanner scanner = new Scanner(System.in);
-        int lesson = 6;
+        int lesson = 5;
         while (task == Integer.MIN_VALUE) {
 
-            lesson6TaskDescription();
+            lesson5TaskDescription();
 
             task = scanner.nextInt();
             if (task == 1) {
                 lesson6TTriangles();
-            } else if(task == 0) {
+            } else if (task == 0) {
                 lesson = Integer.MIN_VALUE;
                 break;
             } else {
@@ -120,5 +113,13 @@ public class Manager {
             }
         }
         return lesson;
+    }
+
+
+    public static int lesson6Manager(int task) {
+
+        lesson6TaskDescription();
+
+        return Integer.MIN_VALUE;
     }
 }

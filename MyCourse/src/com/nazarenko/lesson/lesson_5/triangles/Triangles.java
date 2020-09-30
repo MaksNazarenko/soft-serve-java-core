@@ -1,4 +1,4 @@
-package com.nazarenko.lesson.lesson_6.triangles;
+package com.nazarenko.lesson.lesson_5.triangles;
 
 import java.util.Scanner;
 
@@ -14,7 +14,7 @@ public class Triangles {
         Scanner scanner = new Scanner(System.in);
         int task;
 
-        lesson6TrianglesDescription();
+        lesson5TrianglesDescription();
 
         do {
             task = scanner.nextInt();
