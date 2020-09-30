@@ -16,3 +16,6 @@ Group: Dp-P028
 * [Lesson 4](https://github.com/MaksNazarenko/soft-serve-java-core/tree/master/MyCourse/src/com/nazarenko/lesson/lesson_4) **Conditional Statements**:
     * [Task 1](https://github.com/MaksNazarenko/soft-serve-java-core/tree/master/MyCourse/src/com/nazarenko/lesson/lesson_4/task1)
     * [Home work 1](https://github.com/MaksNazarenko/soft-serve-java-core/tree/master/MyCourse/src/com/nazarenko/lesson/lesson_4/homework1)
+* [Lesson 5](https://github.com/MaksNazarenko/soft-serve-java-core/tree/master/MyCourse/src/com/nazarenko/lesson/lesson_5) **Arrays. Loops**:
+    * [Triangles](https://github.com/MaksNazarenko/soft-serve-java-core/tree/master/MyCourse/src/com/nazarenko/lesson/lesson_5/triangles)
+* [Lesson 6] **OOP. Inheritance**
