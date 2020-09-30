@@ -94,6 +94,8 @@ public class L1_T1 {
     Program intro
     */
     private static void intro(){
-        System.out.println("Choose which task to execute:\n1. Calculate two variables.\n2. Ask mood.");
+        System.out.println("Choose which task to execute:\n" +
+                "1. Calculate two variables.\n" +
+                "2. Ask mood.");
     }
 }

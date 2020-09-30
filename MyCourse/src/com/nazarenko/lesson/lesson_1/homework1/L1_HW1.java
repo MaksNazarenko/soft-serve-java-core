@@ -128,7 +128,10 @@ public class L1_HW1 {
         Program intro
     */
     private static void intro(){
-        System.out.println("Choose which task to execute:\n1. Calculate flower bed characteristics.\n2. Small talk.\n3. Calls expenditures.");
+        System.out.println("Choose which task to execute:\n" +
+                "   1 – Calculate flower bed characteristics\n" +
+                "   2 – Small talk\n" +
+                "   3 – Calls expenditures");
     }
 
     /*

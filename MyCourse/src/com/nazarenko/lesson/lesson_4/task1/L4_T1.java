@@ -1,7 +1,18 @@
+/*
+    1. Enter three numbers. Find out how many of them are odd.
+    2. Enter the number of the day of the week. Display the name in three languages.
+    3. Enter the name of the country. Print the name of the continent. (Declare enum with names of continents)
+    4. Create class Product with fields name, price and quantity.
+        • Create four instances of type Product.
+        • Display the name and quantity of the most expensive item.
+        • Display the name of the items, which has the biggest quantity.
+*/
+
 package com.nazarenko.lesson.lesson_4.task1;
 
 import java.util.Scanner;
 
+import static com.nazarenko.lesson.description.Description.lesson4Task1Description;
 import static com.nazarenko.lesson.lesson_4.task1.CountryInContinent.countryInContinent;
 import static com.nazarenko.lesson.lesson_4.task1.DayOfWeek.dayOfWeek;
 import static com.nazarenko.lesson.lesson_4.task1.OddNumbers.oddNumbers;
@@ -15,7 +26,9 @@ public class L4_T1 {
     private static void chooseTask() {
         Scanner scanner = new Scanner(System.in);
         int task;
-        System.out.println("Chore one of following task:\n 1 – Find odd numbers;\n 2 – 3-language name of a day of a week;\n 3 – Continent of country;\n 4 – Info of Products.");
+
+        lesson4Task1Description();
+
         do {
             task = scanner.nextInt();
             switch (task) {
@@ -28,13 +41,3 @@ public class L4_T1 {
         } while(task == 0);
     }
 }
-
-/*
-    1. Enter three numbers. Find out how many of them are odd.
-    2. Enter the number of the day of the week. Display the name in three languages.
-    3. Enter the name of the country. Print the name of the continent. (Declare enum with names of continents)
-    4. Create class Product with fields name, price and quantity.
-        • Create four instances of type Product.
-        • Display the name and quantity of the most expensive item.
-        • Display the name of the items, which has the biggest quantity.
-*/

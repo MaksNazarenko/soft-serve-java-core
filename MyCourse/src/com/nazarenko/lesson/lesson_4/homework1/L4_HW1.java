@@ -15,6 +15,8 @@ package com.nazarenko.lesson.lesson_4.homework1;
 
 import java.util.Scanner;
 
+import static com.nazarenko.lesson.description.Description.lesson4HomeWork1Description;
+
 public class L4_HW1 {
     public static void lesson4HomeWork1(){
         taskManager();
@@ -22,9 +24,9 @@ public class L4_HW1 {
 
     private static void taskManager(){
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Choose task to execute: " +
-                "\n1 – Check if three values in range [-5;5]" +
-                "\n2 – Check if doggos have same name and find the oldest doggo");
+
+        lesson4HomeWork1Description();
+
         int execute = 0;
         while(execute == 0){
             execute = scanner.nextInt();

@@ -30,6 +30,7 @@ public class Main {
                 }
             } else if (lesson == 2) {
                 lesson2Manager();
+                mainManager();
             } else if (lesson == 3) {
                 if (lesson3Manager(task) == Integer.MIN_VALUE) {
                     mainManager();
@@ -39,7 +40,11 @@ public class Main {
                     mainManager();
                 }
             } else if (lesson == 5) {
-                if(lesson4Manager(task) == Integer.MIN_VALUE) {
+                if(lesson5Manager(task) == Integer.MIN_VALUE) {
+                    mainManager();
+                }
+            } else if (lesson == 6) {
+                if(lesson6Manager(task) == Integer.MIN_VALUE) {
                     mainManager();
                 }
             } else {
