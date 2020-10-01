@@ -2,14 +2,28 @@ package com.nazarenko.lesson.lesson_5.sorting;
 
 import java.util.Scanner;
 
+import static com.nazarenko.lesson.description.Description.lesson5SortingDescription;
+
 public class Sorting {
 
-    public static void main(String[] args) {
+    public static void lesson5Sorting() {
+        chooseTask();
+    }
 
-        arraySortWithoutTmp();
+    private static void chooseTask() {
+        Scanner scanner = new Scanner(System.in);
+        int task;
 
-        arraySortWithTmp();
+        lesson5SortingDescription();
 
+        do {
+            task = scanner.nextInt();
+            switch (task) {
+                case 1: arraySortWithoutTmp(); break;
+                case 2: arraySortWithTmp(); break;
+                default: task = 0; System.out.print("Incorrect input. Choose ones more: ");
+            }
+        } while(task == 0);
     }
 
 
@@ -30,12 +44,13 @@ public class Sorting {
 
     private static int[] arrCreator() {
         Scanner scanner = new Scanner(System.in);
-        System.out.print("Write length of array:\n> ");
+        System.out.print("Write length of an array:\n> ");
         int arrLength = scanner.nextInt();
 
         int[] arr = new int[arrLength];
 
         for(int i = 0; i < arrLength; i++) {
+            System.out.print("Write element " + (i + 1) + " of an array: > ");
             arr[i] = scanner.nextInt();
         }
 
@@ -77,6 +92,5 @@ public class Sorting {
             }
         }
     }
-
 
 }

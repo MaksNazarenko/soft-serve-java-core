@@ -6,7 +6,7 @@ import static com.nazarenko.lesson.description.Description.*;
 
 public class Triangles {
 
-    public static void lesson6TTriangles() {
+    public static void lesson5Triangles() {
         chooseTask();
     }
 

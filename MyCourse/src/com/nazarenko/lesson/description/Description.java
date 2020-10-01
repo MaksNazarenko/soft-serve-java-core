@@ -61,6 +61,7 @@ public class Description {
     public static void lesson5TaskDescription() {
         System.out.println("Choose task number:\n" +
                 "   1 – Triangles\n" +
+                "   2 – Sorting\n" +
                 "Press 0 to choose another lesson.");
         System.out.print("> ");
     }
@@ -77,6 +78,14 @@ public class Description {
                 "   8 – Equilateral Triangle Reverse\n" +
                 "   9 – ChristmasThree\n" +
                 "   10 – Christmas Three Reverse\n" +
+                "Press 0 to choose another lesson.");
+        System.out.print("> ");
+    }
+
+    public static void lesson5SortingDescription() {
+        System.out.println("Choose task number:\n" +
+                "   1 – Sorting without temporary variable\n" +
+                "   2 – Sorting using temporary variable\n" +
                 "Press 0 to choose another lesson.");
         System.out.print("> ");
     }
