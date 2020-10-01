@@ -63,6 +63,7 @@ public class Description {
                 "   1 – Triangles\n" +
                 "   2 – Sorting\n" +
                 "   3 – Arrays and Class Employee\n" +
+                "   4 – Home work\n" +
                 "Press 0 to choose another lesson.");
         System.out.print("> ");
     }
@@ -95,6 +96,17 @@ public class Description {
         System.out.println("Choose task number:\n" +
                 "   1 – Arrays\n" +
                 "   2 – Class Employee\n" +
+                "Press 0 to choose another lesson.");
+        System.out.print("> ");
+    }
+
+    public static void lesson5HomeWork1Description() {
+        System.out.println("Choose task number:\n" +
+                "   1 – Amount of days in any month\n" +
+                "   2 – Sum of a first half or product of a second half of an array\n" +
+                "   3 – Find second positive and position of minimum number of an array\n" +
+                "   4 – Enter numbers until first negative number, product of all even numbers\n" +
+                "   5 – Class Cars, display cars created in certain year and order cars by year of production" +
                 "Press 0 to choose another lesson.");
         System.out.print("> ");
     }

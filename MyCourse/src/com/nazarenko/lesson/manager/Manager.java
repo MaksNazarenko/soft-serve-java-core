@@ -9,6 +9,7 @@ import static com.nazarenko.lesson.lesson_3.homework1.L3_HW1.lesson3HomeWork1;
 import static com.nazarenko.lesson.lesson_3.task1.L3_T1.lesson3Task1;
 import static com.nazarenko.lesson.lesson_4.homework1.L4_HW1.lesson4HomeWork1;
 import static com.nazarenko.lesson.lesson_4.task1.L4_T1.lesson4Task1;
+import static com.nazarenko.lesson.lesson_5.homework1.L4_HW1.lesson5HomeWork1;
 import static com.nazarenko.lesson.lesson_5.sorting.Sorting.lesson5Sorting;
 import static com.nazarenko.lesson.lesson_5.task_1.L5_T1.lesson5Task1;
 import static com.nazarenko.lesson.lesson_5.triangles.Triangles.lesson5Triangles;
@@ -110,6 +111,8 @@ public class Manager {
                 lesson5Sorting();
             } else if (task == 3) {
                 lesson5Task1();
+            } else if (task == 4) {
+                lesson5HomeWork1();
             }
             else if (task == 0) {
                 lesson = Integer.MIN_VALUE;
