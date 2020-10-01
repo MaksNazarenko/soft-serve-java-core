@@ -62,6 +62,7 @@ public class Description {
         System.out.println("Choose task number:\n" +
                 "   1 – Triangles\n" +
                 "   2 – Sorting\n" +
+                "   3 – Arrays and Class Employee\n" +
                 "Press 0 to choose another lesson.");
         System.out.print("> ");
     }
@@ -86,6 +87,14 @@ public class Description {
         System.out.println("Choose task number:\n" +
                 "   1 – Sorting without temporary variable\n" +
                 "   2 – Sorting using temporary variable\n" +
+                "Press 0 to choose another lesson.");
+        System.out.print("> ");
+    }
+
+    public static void lesson5Task1Description() {
+        System.out.println("Choose task number:\n" +
+                "   1 – Arrays\n" +
+                "   2 – Class Employee\n" +
                 "Press 0 to choose another lesson.");
         System.out.print("> ");
     }
