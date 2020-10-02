@@ -5,13 +5,7 @@ import java.util.Scanner;
 public class HumanManager {
     public static void main(String[] args) {
 
-
         manager();
-
-
-
-
-
 
     }
 
@@ -83,7 +77,7 @@ public class HumanManager {
             System.out.println("    Has born in " + student.getDateOfBirth() + " year in " + student.getCountryOfBirth());
             System.out.println("    Student of " + student.getGroupNumber() + " group");
         }
-
-
     }
+
+
 }
