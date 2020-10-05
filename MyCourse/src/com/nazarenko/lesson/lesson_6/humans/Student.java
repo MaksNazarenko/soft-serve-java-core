@@ -6,8 +6,8 @@ public class Student extends Human {
 
     Student(){}
 
-    Student(String firstName, String lastName, int dateOfBirth, String countryOfBirth, int groupNumber) {
-        super(firstName, lastName, dateOfBirth, countryOfBirth);
+    Student(String firstName, String lastName, int dateOfBirth, String countryOfBirth, int socialSecurityNumber, int groupNumber) {
+        super(firstName, lastName, dateOfBirth, countryOfBirth, socialSecurityNumber);
         this.groupNumber = groupNumber;
     }
 

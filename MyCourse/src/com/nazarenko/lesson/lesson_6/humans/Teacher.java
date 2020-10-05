@@ -3,8 +3,10 @@ package com.nazarenko.lesson.lesson_6.humans;
 public class Teacher extends Employee {
     private AcademicRank academicRank;
 
-    Teacher(String firstName, String lastName, int dateOfBirth, String countryOfBirth, int hireDate, int monthSalary, AcademicRank academicRank) {
-        super(firstName, lastName, dateOfBirth, countryOfBirth, hireDate, monthSalary);
+    Teacher(){}
+
+    Teacher(String firstName, String lastName, int dateOfBirth, String countryOfBirth, int socialSecurityNumber, int hireDate, int monthSalary, AcademicRank academicRank) {
+        super(firstName, lastName, dateOfBirth, countryOfBirth, socialSecurityNumber, hireDate, monthSalary);
         this.academicRank = academicRank;
     }
 

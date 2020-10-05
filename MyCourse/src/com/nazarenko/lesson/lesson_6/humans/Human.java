@@ -3,19 +3,19 @@ package com.nazarenko.lesson.lesson_6.humans;
 public abstract class Human {
     private String firstName;
     private String lastName;
-    private int dateOfBirth;
+    private int yearOfBirth;
     private String countryOfBirth;
     private int socialSecurityNumber;
 
     Human(){}
 
-    Human(String firstName, String lastName, int dateOfBirth, String countryOfBirth) {
+    Human(String firstName, String lastName, int dateOfBirth, String countryOfBirth, int socialSecurityNumber) {
         this.firstName = firstName;
         this.lastName = lastName;
-        this.dateOfBirth = dateOfBirth;
+        this.yearOfBirth = dateOfBirth;
         this.countryOfBirth = countryOfBirth;
+        this.socialSecurityNumber = socialSecurityNumber;
     }
-
 
     public String getFirstName() {
         return firstName;
@@ -33,12 +33,12 @@ public abstract class Human {
         this.lastName = lastName;
     }
 
-    public int getDateOfBirth() {
-        return dateOfBirth;
+    public int getYearOfBirth() {
+        return yearOfBirth;
     }
 
-    public void setDateOfBirth(int dateOfBirth) {
-        this.dateOfBirth = dateOfBirth;
+    public void setYearOfBirth(int yearOfBirth) {
+        this.yearOfBirth = yearOfBirth;
     }
 
     public String getCountryOfBirth() {
