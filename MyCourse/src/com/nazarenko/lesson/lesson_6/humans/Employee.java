@@ -6,7 +6,8 @@ public class Employee extends Human {
 
     Employee(){}
 
-    Employee(String firstName, String lastName, int dateOfBirth, String countryOfBirth, int socialSecurityNumber, int hireDate, int monthSalary) {
+    Employee(String firstName, String lastName, int dateOfBirth, String countryOfBirth,
+             int socialSecurityNumber, int hireDate, int monthSalary) {
         super(firstName, lastName, dateOfBirth, countryOfBirth, socialSecurityNumber);
         this.hireDate = hireDate;
         this.monthSalary = monthSalary;

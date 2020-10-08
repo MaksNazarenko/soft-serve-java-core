@@ -3,6 +3,13 @@ package com.nazarenko.lesson.lesson_6.humans;
 import java.util.Scanner;
 
 public class HumanManager {
+
+    static final String MAIN_MENU = "Press:\n" +
+            "   1 – create students list;\n" +
+            "   2 – display info of all students;\n" +
+            "   3 – display info of students in certain group;\n" +
+            "   0 – exit.\n> ";
+
     public static void main(String[] args) {
         System.out.println("Program starting...\n");
 
@@ -11,39 +18,25 @@ public class HumanManager {
         System.out.println("\nProgram ends.");
     }
 
-    private static boolean mainMenuInfo() {
-        System.out.print("Press:\n" +
-                "   1 – create a group;\n" +
-                "   2 – display info of all students;\n" +
-                "   3 – display info of students in certain group;\n" +
-                "   0 – exit.\n> ");
-        return true;
-    }
-
     private static boolean manager() {
         Scanner scanner = new Scanner(System.in);
 
         Student[] students = new Student[0];
 
-        int operation = Integer.MIN_VALUE;
-        while (operation == Integer.MIN_VALUE) {
-            mainMenuInfo();
-            operation = scanner.nextInt();
+        while (true) {
+            System.out.print(MAIN_MENU);
+            int operation = scanner.nextInt();
             if (operation == 1) {
                 students = groupCreator();
-                operation = Integer.MIN_VALUE;
             } else if(operation == 2) {
                 displayInfoOfAllStudents(students);
-                operation = Integer.MIN_VALUE;
             } else if(operation == 3) {
                 displayInfoOfGroup(students);
-                operation = Integer.MIN_VALUE;
             }
             else if(operation == 0) {
                 break;
             } else {
                 System.out.println("\nYou've provided wrong option.\n");
-                operation = Integer.MIN_VALUE;
             }
         }
         return true;
@@ -77,14 +70,14 @@ public class HumanManager {
         Scanner scanner = new Scanner(System.in);
 
         System.out.print("Write amount of students:\n> ");
-        Student[] group = new Student[scanner.nextInt()];
+        Student[] students = new Student[scanner.nextInt()];
 
         System.out.println("Input info of all students:");
-        for(int i = 0; i < group.length; i++) {
+        for(int i = 0; i < students.length; i++) {
             System.out.println("Adding student number " + (i + 1) + "...");
-            group[i] = studentCreator();
+            students[i] = studentCreator();
         }
-        return group;
+        return students;
     }
 
     private static boolean displayInfoOfStudent(Student student) {
@@ -94,12 +87,11 @@ public class HumanManager {
         return true;
     }
 
-    private static boolean displayInfoOfAllStudents(Student[] group) {
+    private static void displayInfoOfAllStudents(Student[] group) {
         int index = 0;
 
         if(group.length == 0) {
             System.out.println("\nThere is no students yet. Please, add a student(-s).\n");
-            return true;
         } else {
             System.out.println("Students info:");
             for (Student student : group) {
@@ -109,10 +101,9 @@ public class HumanManager {
             }
         }
         System.out.println("\n");
-        return true;
     }
 
-    private static boolean displayInfoOfGroup(Student[] students) {
+    private static void displayInfoOfGroup(Student[] students) {
         Scanner scanner = new Scanner(System.in);
         Student[] group = new Student[students.length];
 
@@ -127,7 +118,6 @@ public class HumanManager {
             }
         }
         System.out.println("\n");
-        return true;
     }
 
 
