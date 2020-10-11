@@ -2,6 +2,8 @@ package com.nazarenko.lesson.lesson6.university;
 
 import com.nazarenko.lesson.lesson6.university.people.Student;
 
+import javax.swing.text.DateFormatter;
+import java.time.LocalDate;
 import java.util.Scanner;
 
 public class MyUniversity {
@@ -54,8 +56,8 @@ public class MyUniversity {
         System.out.print("Last name:\n> ");
         student.setLastName(scanner.nextLine());
 
-        System.out.print("Year of birth:\n> ");
-        student.setYearOfBirth(scanner.nextInt());
+        System.out.print("Year of birth (yyyy-mm-dd):\n> ");
+        student.setYearOfBirth(LocalDate.parse(scanner.next()));
 
         System.out.print("Country of birth:\n> ");
         scanner.nextLine(); // to take \n after .nextInt
@@ -87,8 +89,8 @@ public class MyUniversity {
     }
 
     private static boolean displayInfoOfStudent(Student student) {
-        System.out.println(student.getFirstName() + " " + student.getLastName() + ": ");
-        System.out.println("    Has born in " + student.getYearOfBirth() + " year in " + student.getCountryOfBirth());
+        System.out.println("ID: " + student.getStudentId() + " " + student.getFirstName() + " " + student.getLastName() + ": ");
+        System.out.println("    Has born in " + student.getYearOfBirth() + " in " + student.getCountryOfBirth());
         System.out.println("    Student of " + student.getGroupNumber() + " group");
         System.out.println("Grades: " + student.getGrades());
         return true;

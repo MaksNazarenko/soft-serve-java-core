@@ -1,14 +1,17 @@
 package com.nazarenko.lesson.lesson6.university.people;
 
-import com.nazarenko.lesson.lesson6.university.people.Employee;
+
+import java.time.LocalDate;
 
 public class Staff extends Employee {
     private String professionName;
 
     Staff(){}
 
-    Staff(String firstName, String lastName, int dateOfBirth, String countryOfBirth, int socialSecurityNumber, int hireDate, int monthSalary, String professionName) {
-        super(firstName, lastName, dateOfBirth, countryOfBirth, socialSecurityNumber, hireDate, monthSalary);
+    Staff(String firstName, String lastName, LocalDate dateOfBirth, String countryOfBirth,
+          int socialSecurityNumber, LocalDate hireDate, int monthSalary, String professionName) {
+        super(firstName, lastName, dateOfBirth, countryOfBirth,
+                socialSecurityNumber, hireDate, monthSalary);
         this.professionName = professionName;
     }
 

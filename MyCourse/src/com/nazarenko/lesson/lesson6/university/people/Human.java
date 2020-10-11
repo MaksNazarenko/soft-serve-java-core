@@ -1,15 +1,18 @@
 package com.nazarenko.lesson.lesson6.university.people;
 
+import java.time.LocalDate;
+import java.util.Date;
+
 public abstract class Human {
     private String firstName;
     private String lastName;
-    private int yearOfBirth;
+    private LocalDate yearOfBirth;
     private String countryOfBirth;
     private int socialSecurityNumber;
 
     Human(){}
 
-    Human(String firstName, String lastName, int dateOfBirth, String countryOfBirth, int socialSecurityNumber) {
+    Human(String firstName, String lastName, LocalDate dateOfBirth, String countryOfBirth, int socialSecurityNumber) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.yearOfBirth = dateOfBirth;
@@ -33,11 +36,11 @@ public abstract class Human {
         this.lastName = lastName;
     }
 
-    public int getYearOfBirth() {
+    public LocalDate getYearOfBirth() {
         return yearOfBirth;
     }
 
-    public void setYearOfBirth(int yearOfBirth) {
+    public void setYearOfBirth(LocalDate yearOfBirth) {
         this.yearOfBirth = yearOfBirth;
     }
 
