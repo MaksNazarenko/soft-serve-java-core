@@ -10,8 +10,8 @@ public class Teacher extends Employee implements Teachable {
     private ArrayList<Group> groups; //todo synchronize group's teachers and teachers' group
 
 
-    Teacher(String firstName, String lastName, LocalDate dateOfBirth, String countryOfBirth,
-            int socialSecurityNumber, LocalDate hireDate, int monthSalary, AcademicRank academicRank) {
+    public Teacher(String firstName, String lastName, LocalDate dateOfBirth, String countryOfBirth,
+                   int socialSecurityNumber, LocalDate hireDate, int monthSalary, AcademicRank academicRank) {
         super(firstName, lastName, dateOfBirth, countryOfBirth,
                 socialSecurityNumber, hireDate, monthSalary);
         this.academicRank = academicRank;

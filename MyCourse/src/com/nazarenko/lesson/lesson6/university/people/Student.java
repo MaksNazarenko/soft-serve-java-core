@@ -1,11 +1,14 @@
 package com.nazarenko.lesson.lesson6.university.people;
 
+import com.nazarenko.lesson.lesson6.university.lesson.Lesson;
+
 import java.time.LocalDate;
 import java.util.ArrayList;
+import java.util.HashMap;
 
 public class Student extends Human implements Teachable {
     private int groupNumber; //todo synchronize group's students and student's group
-    private ArrayList<Integer> grades = new ArrayList<Integer>();
+    private HashMap<Lesson, Integer> grades = new HashMap<Lesson, Integer>();
     private static int id = 1;
     private int studentId;
 
@@ -30,12 +33,12 @@ public class Student extends Human implements Teachable {
     }
 
 
-    public ArrayList<Integer> getGrades() {
+    public HashMap<Lesson, Integer> getGrades() {
         return grades;
     }
 
-    public void addGrade(Integer grade) {
-        this.grades.add(grade);
+    public void addGrade(Lesson lesson, Integer grade) {
+        this.grades.put(lesson, grade);
     }
 
 

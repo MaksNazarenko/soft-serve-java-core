@@ -66,10 +66,6 @@ public class MyUniversity {
         System.out.print("Group number:\n> ");
         student.setGroupNumber(scanner.nextInt());
 
-        System.out.print("Students' grades:\n> ");
-        scanner.nextLine();
-        student.addGrade(scanner.nextInt());
-
         System.out.println("Student successfully added.\n");
         return student;
     }
