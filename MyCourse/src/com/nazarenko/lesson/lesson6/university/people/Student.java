@@ -1,16 +1,17 @@
-package com.nazarenko.lesson.lesson_6.humans;
+package com.nazarenko.lesson.lesson6.university.people;
 
-public class Student extends Human {
+import java.util.ArrayList;
+
+public class Student extends Human implements Teachable {
     private int groupNumber;
-    private int[] grades;
+    private ArrayList<Integer> grades = new ArrayList<Integer>();
 
-    Student(){}
+    public Student(){}
 
     Student(String firstName, String lastName, int dateOfBirth, String countryOfBirth, int socialSecurityNumber, int groupNumber) {
         super(firstName, lastName, dateOfBirth, countryOfBirth, socialSecurityNumber);
         this.groupNumber = groupNumber;
     }
-
 
     public int getGroupNumber() {
         return groupNumber;
@@ -20,12 +21,18 @@ public class Student extends Human {
         this.groupNumber = groupNumber;
     }
 
-    public int[] getGrades() {
+
+    public ArrayList<Integer> getGrades() {
         return grades;
     }
 
-    public void setGrades(int[] grades) {
-        this.grades = grades;
+    public void addGrade(Integer grade) {
+        this.grades.add(grade);
     }
 
+
+    @Override
+    public void isTeachable() {
+        System.out.println("Yes, I'm a student.");
+    }
 }

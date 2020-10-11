@@ -1,9 +1,9 @@
-package com.nazarenko.lesson.lesson_6.humans;
+package com.nazarenko.lesson.lesson6.university.people;
 
-public class Teacher extends Employee {
+public class Teacher extends Employee implements Teachable {
     private AcademicRank academicRank;
 
-    Teacher(){}
+
 
     Teacher(String firstName, String lastName, int dateOfBirth, String countryOfBirth, int socialSecurityNumber, int hireDate, int monthSalary, AcademicRank academicRank) {
         super(firstName, lastName, dateOfBirth, countryOfBirth, socialSecurityNumber, hireDate, monthSalary);
@@ -19,4 +19,8 @@ public class Teacher extends Employee {
     }
 
 
+    @Override
+    public void isTeachable() {
+        System.out.println("Yes, I'm a teacher.");
+    }
 }

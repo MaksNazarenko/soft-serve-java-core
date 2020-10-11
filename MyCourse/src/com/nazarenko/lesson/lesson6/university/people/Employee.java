@@ -1,4 +1,6 @@
-package com.nazarenko.lesson.lesson_6.humans;
+package com.nazarenko.lesson.lesson6.university.people;
+
+import com.nazarenko.lesson.lesson6.university.people.Human;
 
 public class Employee extends Human {
     private int hireDate;

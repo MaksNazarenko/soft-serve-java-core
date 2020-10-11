@@ -1,4 +1,4 @@
-package com.nazarenko.lesson.lesson_6.humans;
+package com.nazarenko.lesson.lesson6.university.people;
 
 public abstract class Human {
     private String firstName;

@@ -1,4 +1,6 @@
-package com.nazarenko.lesson.lesson_6.humans;
+package com.nazarenko.lesson.lesson6.university.people;
+
+import com.nazarenko.lesson.lesson6.university.people.Employee;
 
 public class Staff extends Employee {
     private String professionName;

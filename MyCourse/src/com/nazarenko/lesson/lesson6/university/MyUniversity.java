@@ -1,8 +1,10 @@
-package com.nazarenko.lesson.lesson_6.humans;
+package com.nazarenko.lesson.lesson6.university;
+
+import com.nazarenko.lesson.lesson6.university.people.Student;
 
 import java.util.Scanner;
 
-public class HumanManager {
+public class MyUniversity {
 
     static final String MAIN_MENU = "Press:\n" +
             "   1 – create students list;\n" +
@@ -62,6 +64,10 @@ public class HumanManager {
         System.out.print("Group number:\n> ");
         student.setGroupNumber(scanner.nextInt());
 
+        System.out.print("Students' grades:\n> ");
+        scanner.nextLine();
+        student.addGrade(scanner.nextInt());
+
         System.out.println("Student successfully added.\n");
         return student;
     }
@@ -84,6 +90,7 @@ public class HumanManager {
         System.out.println(student.getFirstName() + " " + student.getLastName() + ": ");
         System.out.println("    Has born in " + student.getYearOfBirth() + " year in " + student.getCountryOfBirth());
         System.out.println("    Student of " + student.getGroupNumber() + " group");
+        System.out.println("Grades: " + student.getGrades());
         return true;
     }
 
