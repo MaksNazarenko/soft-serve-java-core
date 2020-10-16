@@ -1,58 +1,77 @@
 package com.nazarenko.lesson.lesson6.university.structure;
 
-import com.nazarenko.lesson.lesson6.university.people.Teacher;
 import com.nazarenko.lesson.lesson6.university.people.Student;
+import com.nazarenko.lesson.lesson6.university.people.Teacher;
 
+import java.util.Arrays;
 import java.util.ArrayList;
+import java.util.Objects;
 
-public class Group extends Department {
-    private String groupName;
-    private Teacher groupCurator; //todo synchronize group's curator and curator's group
-    private ArrayList<Teacher> groupTeachers; //todo synchronize group's teachers and teachers' group
-    private ArrayList<Student> groupStudents; //todo synchronize group's students and student's group
+public class Group implements Structure {
+    private final String GROUP_NAME;
+    private final ArrayList<Student> students = new ArrayList<>();
+    private Teacher groupCurator;
 
-    Group(String facultyName, String departmentName, String groupName) {
-        super(facultyName, departmentName);
-        this.groupName = groupName;
+    public Group(String groupName, Department departmentOfGroup) {
+        this.GROUP_NAME = groupName;
+        departmentOfGroup.addGroupToDepartment(this);
     }
 
-    public String getGroupName() {
-        return groupName;
+    String getGroupName() {
+        return this.GROUP_NAME;
     }
 
-    public void setGroupCurator(Teacher groupCurator) {
-        this.groupCurator = groupCurator;
+    public void addStudentToGroup(Student newStudent) {
+        this.students.add(newStudent);
+        newStudent.setGroup(this);
     }
 
-    public Teacher getGroupCurator() {
+    public void setGroupCurator(Teacher teacher) {
+        this.groupCurator = teacher;
+        teacher.setCurator();
+    }
+
+    private Teacher getGroupCurator() {
         return groupCurator;
     }
 
-    public ArrayList<Teacher> getGroupTeachers() {
-        return groupTeachers;
+    private String[] listOfStudentsOfGroup() {
+        String[] print = new String[students.size()];
+        int id = 0;
+        for (Student student : students) {
+            print[id] = ++id + ". " + student.getFirstName();
+        }
+        return print;
     }
 
-    public void addGroupTeacher(Teacher newGroupTeacher) {
-        this.groupTeachers.add(newGroupTeacher);
+    @Override
+    public void printStructure() {
+        System.out.println("Curator of " + getGroupName() + " is: " + getGroupCurator() + ", students: \n" +
+                "  " + Arrays.toString(listOfStudentsOfGroup()));
     }
 
-    public ArrayList<Student> getGroupStudents() {
-        return groupStudents;
+    @Override
+    public String toString() {
+        return "Group{" +
+                "GROUP_NAME='" + GROUP_NAME + '\'' +
+                ", students=" + students +
+                ", groupCurator=" + groupCurator +
+                '}';
     }
 
-    public void addGroupStudent(Student newGroupStudent) {
-        this.groupStudents.add(newGroupStudent);
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Group group = (Group) o;
+        return GROUP_NAME.equals(group.GROUP_NAME) &&
+                students.equals(group.students) &&
+                Objects.equals(groupCurator, group.groupCurator);
     }
 
-    public void addGroupStudent(ArrayList<Student> students, int studentId) {
-        this.groupStudents.add(students.get(studentId));
+    @Override
+    public int hashCode() {
+        return Objects.hash(GROUP_NAME, students, groupCurator);
     }
 
-    public void setGroupStudents(ArrayList<Student> groupStudents) {
-        this.groupStudents.addAll(groupStudents);
-    }
-
-    public void deleteGroupStudents(int id) {
-        groupStudents.remove(id);
-    }
 }

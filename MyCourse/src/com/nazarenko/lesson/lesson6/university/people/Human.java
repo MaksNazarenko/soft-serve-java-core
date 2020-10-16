@@ -1,30 +1,28 @@
 package com.nazarenko.lesson.lesson6.university.people;
 
 import java.time.LocalDate;
-import java.util.Date;
 
-public abstract class Human {
+public class Human {
     private String firstName;
     private String lastName;
-    private LocalDate yearOfBirth;
-    private String countryOfBirth;
-    private int socialSecurityNumber;
+    private final LocalDate YEAR_OF_BIRTH;
+    private final String COUNTRY_OF_BIRTH;
+    private static long countOfHumans;
+    final long SOCIAL_SECURITY_NUMBER;
 
-    Human(){}
-
-    Human(String firstName, String lastName, LocalDate dateOfBirth, String countryOfBirth, int socialSecurityNumber) {
+    Human(String firstName, String lastName, LocalDate dateOfBirth, String countryOfBirth) {
         this.firstName = firstName;
         this.lastName = lastName;
-        this.yearOfBirth = dateOfBirth;
-        this.countryOfBirth = countryOfBirth;
-        this.socialSecurityNumber = socialSecurityNumber;
+        this.YEAR_OF_BIRTH = dateOfBirth;
+        this.COUNTRY_OF_BIRTH = countryOfBirth;
+        this.SOCIAL_SECURITY_NUMBER = ++countOfHumans;
     }
 
     public String getFirstName() {
         return firstName;
     }
 
-    public void setFirstName(String firstName) {
+    public void changeFirstName(String firstName) {
         this.firstName = firstName;
     }
 
@@ -32,31 +30,20 @@ public abstract class Human {
         return lastName;
     }
 
-    public void setLastName(String lastName) {
+    public void changeLastName(String lastName) {
         this.lastName = lastName;
     }
 
-    public LocalDate getYearOfBirth() {
-        return yearOfBirth;
+    public LocalDate getYEAR_OF_BIRTH() {
+        return YEAR_OF_BIRTH;
     }
 
-    public void setYearOfBirth(LocalDate yearOfBirth) {
-        this.yearOfBirth = yearOfBirth;
+    public String getCOUNTRY_OF_BIRTH() {
+        return COUNTRY_OF_BIRTH;
     }
 
-    public String getCountryOfBirth() {
-        return countryOfBirth;
+    public long getSOCIAL_SECURITY_NUMBER() {
+        return SOCIAL_SECURITY_NUMBER;
     }
 
-    public void setCountryOfBirth(String countryOfBirth) {
-        this.countryOfBirth = countryOfBirth;
-    }
-
-    public int getSocialSecurityNumber() {
-        return socialSecurityNumber;
-    }
-
-    public void setSocialSecurityNumber(int socialSecurityNumber) {
-        this.socialSecurityNumber = socialSecurityNumber;
-    }
 }

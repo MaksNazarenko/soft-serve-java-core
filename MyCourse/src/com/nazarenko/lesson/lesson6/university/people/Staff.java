@@ -1,25 +1,24 @@
 package com.nazarenko.lesson.lesson6.university.people;
 
+import com.nazarenko.lesson.lesson6.university.structure.University;
 
 import java.time.LocalDate;
 
 public class Staff extends Employee {
     private String professionName;
 
-    Staff(){}
-
-    Staff(String firstName, String lastName, LocalDate dateOfBirth, String countryOfBirth,
-          int socialSecurityNumber, LocalDate hireDate, int monthSalary, String professionName) {
-        super(firstName, lastName, dateOfBirth, countryOfBirth,
-                socialSecurityNumber, hireDate, monthSalary);
+    public Staff(String firstName, String lastName, LocalDate dateOfBirth, String countryOfBirth,
+                 LocalDate hireDate, float salaryRate, String professionName) {
+        super(firstName, lastName, dateOfBirth, countryOfBirth, hireDate, salaryRate);
         this.professionName = professionName;
+        University.addStaffToUniversity(this);
     }
 
     public String getProfessionName() {
         return professionName;
     }
 
-    public void setProfessionName(String professionName) {
-        this.professionName = professionName;
+    public void changeProfession(String newProfessionName) {
+        this.professionName = newProfessionName;
     }
 }

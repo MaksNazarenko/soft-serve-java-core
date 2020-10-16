@@ -1,35 +1,32 @@
 package com.nazarenko.lesson.lesson6.university.people;
 
 import java.time.LocalDate;
-import java.util.Date;
 
-public class Employee extends Human {
+public abstract class Employee extends Human {
     private LocalDate hireDate;
-    private int monthSalary;
-
-    Employee(){}
+    private float salaryRate;
 
     Employee(String firstName, String lastName, LocalDate dateOfBirth, String countryOfBirth,
-             int socialSecurityNumber, LocalDate hireDate, int monthSalary) {
-        super(firstName, lastName, dateOfBirth, countryOfBirth, socialSecurityNumber);
+             LocalDate hireDate, float salaryRate) {
+        super(firstName, lastName, dateOfBirth, countryOfBirth);
         this.hireDate = hireDate;
-        this.monthSalary = monthSalary;
+        this.salaryRate = salaryRate;
     }
 
     public LocalDate getHireDate() {
         return hireDate;
     }
 
-    public void setHireDate(LocalDate hireDate) {
+    void setHireDate(LocalDate hireDate) {
         this.hireDate = hireDate;
     }
 
-    public int getMonthSalary() {
-        return monthSalary;
+    public float getMonthSalary() {
+        return salaryRate;
     }
 
     public void setMonthSalary(int monthSalary) {
-        this.monthSalary = monthSalary;
+        this.salaryRate = monthSalary;
     }
 
 }

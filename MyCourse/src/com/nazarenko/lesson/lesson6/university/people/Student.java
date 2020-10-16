@@ -1,46 +1,36 @@
 package com.nazarenko.lesson.lesson6.university.people;
 
-import com.nazarenko.lesson.lesson6.university.lesson.Lesson;
+import com.nazarenko.lesson.lesson6.university.lesson.LessonsList;
+import com.nazarenko.lesson.lesson6.university.structure.Group;
+import com.nazarenko.lesson.lesson6.university.structure.University;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.HashMap;
 
 public class Student extends Human implements Teachable {
-    private int groupNumber; //todo synchronize group's students and student's group
-    private HashMap<Lesson, Integer> grades = new HashMap<Lesson, Integer>();
-    private static int id = 1;
-    private int studentId;
+    private Group group;
+    private HashMap<LessonsList, ArrayList<Float>> grades;
+    private static int countOfStudents;
+    private final int studentId;
 
-    public Student(){
-        this.studentId = id;
-        id++;
+    public Student(String firstName, String lastName, LocalDate dateOfBirth, String countryOfBirth) {
+        super(firstName, lastName, dateOfBirth, countryOfBirth);
+        this.studentId = ++countOfStudents;
+        University.addStudentsToUniversity(this);
     }
 
-    Student(String firstName, String lastName, LocalDate dateOfBirth, String countryOfBirth, int socialSecurityNumber, int groupNumber) {
-        super(firstName, lastName, dateOfBirth, countryOfBirth, socialSecurityNumber);
-        this.groupNumber = groupNumber;
-        this.studentId = id;
-        id++;
+    public void setGroup(Group group) {
+        this.group = group;
     }
 
-    public int getGroupNumber() {
-        return groupNumber;
+    public Group getGroup() {
+        return group;
     }
 
-    public void setGroupNumber(int groupNumber) {
-        this.groupNumber = groupNumber;
+    public int getStudentId() {
+        return studentId;
     }
-
-
-    public HashMap<Lesson, Integer> getGrades() {
-        return grades;
-    }
-
-    public void addGrade(Lesson lesson, Integer grade) {
-        this.grades.put(lesson, grade);
-    }
-
 
     @Override
     public boolean isTeachable() {
@@ -48,7 +38,4 @@ public class Student extends Human implements Teachable {
         return true;
     }
 
-    public int getStudentId() {
-        return studentId;
-    }
 }

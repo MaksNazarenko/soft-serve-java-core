@@ -1,5 +1,5 @@
 package com.nazarenko.lesson.lesson6.university.people;
 
-public interface Teachable {
+interface Teachable {
     boolean isTeachable();
 }

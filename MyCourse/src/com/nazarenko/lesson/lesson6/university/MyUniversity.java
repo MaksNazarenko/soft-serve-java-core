@@ -1,10 +1,16 @@
 package com.nazarenko.lesson.lesson6.university;
 
+import com.nazarenko.lesson.lesson6.university.people.AcademicRank;
+import com.nazarenko.lesson.lesson6.university.people.Staff;
 import com.nazarenko.lesson.lesson6.university.people.Student;
+import com.nazarenko.lesson.lesson6.university.people.Teacher;
+import com.nazarenko.lesson.lesson6.university.structure.Department;
+import com.nazarenko.lesson.lesson6.university.structure.Faculty;
+import com.nazarenko.lesson.lesson6.university.structure.Group;
 
-import javax.swing.text.DateFormatter;
 import java.time.LocalDate;
-import java.util.Scanner;
+
+import static com.nazarenko.lesson.lesson6.university.structure.University.UNIVERSITY;
 
 public class MyUniversity {
 
@@ -15,13 +21,40 @@ public class MyUniversity {
             "   0 – exit.\n> ";
 
     public static void main(String[] args) {
-        System.out.println("Program starting...\n");
 
-        manager();
+//        System.out.println("Program starting...\n");
+//
+//        manager();
+//
+//        System.out.println("\nProgram ends.");
 
-        System.out.println("\nProgram ends.");
+
+
+
+        Faculty faculty = new Faculty("IASA");
+        Department department = new Department("SAD", faculty);
+        Group group = new Group("My first group", department);
+        System.out.println("1");
+        UNIVERSITY.printStructure();
+
+        System.out.println("2");
+        faculty.printStructure();
+
+        System.out.println("3");
+        department.printStructure();
+
+        System.out.println("4");
+        group.printStructure();
+
+
+        Student student1 = new Student("Maks", "Naz", LocalDate.of(2000,01,01), "Ukraine");
+        Student student2 = new Student("Kostia", "Kostia", LocalDate.of(2000,01,01), "Ukraine");
+        Teacher teacher1 = new Teacher("Mike", "Dzig", LocalDate.of(2000, 02, 02), "Ükraine", LocalDate.of(2020, 9, 15), 100500, AcademicRank.LECTURER);
+        Student student3 = new Student("Vasia", "Pupkin", LocalDate.of(2000,01,01), "Ukraine");
+        Staff staff1 = new Staff("Staf", "Stafych", LocalDate.of(1980, 12, 31), "Ukraine", LocalDate.of(2000, 05, 15), 10, "Fizruk");
+        UNIVERSITY.printStructure();
     }
-
+/*
     private static boolean manager() {
         Scanner scanner = new Scanner(System.in);
 
@@ -46,7 +79,7 @@ public class MyUniversity {
         return true;
     }
 
-    private static Student studentCreator() {
+    private static Student studentCreator() { //builder pattern
         Scanner scanner = new Scanner(System.in);
         Student student = new Student();
 
@@ -64,7 +97,7 @@ public class MyUniversity {
         student.setCountryOfBirth(scanner.nextLine());
 
         System.out.print("Group number:\n> ");
-        student.setGroupNumber(scanner.nextInt());
+        //student.setGroupNumber(scanner.nextInt()); //.set...
 
         System.out.println("Student successfully added.\n");
         return student;
@@ -124,6 +157,5 @@ public class MyUniversity {
         }
         System.out.println("\n");
     }
-
-
+*/
 }
