@@ -13,9 +13,10 @@ public class Department implements Structure {
     public Department(String departmentName, Faculty facultyOfDepartment) {
         this.DEPARTMENT_NAME = departmentName;
         facultyOfDepartment.addDepartmentToFaculty(this);
+        University.addDepartmentToUniversity(this);
     }
 
-    String getDepartmentName() {
+    public String getDepartmentName() {
         return this.DEPARTMENT_NAME;
     }
 

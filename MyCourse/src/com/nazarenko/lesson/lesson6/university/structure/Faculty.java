@@ -13,7 +13,7 @@ public class Faculty implements Structure {
         University.addFacultyToUniversity(this);
     }
 
-    String getFacultyName() {
+    public String getFacultyName() {
         return FACULTY_NAME;
     }
 
@@ -28,6 +28,10 @@ public class Faculty implements Structure {
             print[id] = ++id + ". " + department.getDepartmentName();
         }
         return print;
+    }
+
+    public HashSet<Department> getDepartments() {
+        return departments;
     }
 
     @Override
@@ -49,13 +53,12 @@ public class Faculty implements Structure {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Faculty faculty = (Faculty) o;
-        return FACULTY_NAME.equals(faculty.FACULTY_NAME) &&
-                departments.equals(faculty.departments);
+        return FACULTY_NAME.equals(faculty.FACULTY_NAME);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(FACULTY_NAME, departments);
+        return Objects.hash(FACULTY_NAME);
     }
 }
 

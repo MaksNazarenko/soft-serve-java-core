@@ -21,7 +21,7 @@ public abstract class Employee extends Human {
         this.hireDate = hireDate;
     }
 
-    public float getMonthSalary() {
+    public float salaryRate() {
         return salaryRate;
     }
 

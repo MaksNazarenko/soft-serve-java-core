@@ -1,5 +1,6 @@
 package com.nazarenko.lesson.lesson6.university.people;
 
+import com.nazarenko.lesson.lesson6.university.lesson.Course;
 import com.nazarenko.lesson.lesson6.university.structure.Group;
 import com.nazarenko.lesson.lesson6.university.structure.University;
 
@@ -34,6 +35,7 @@ public class Teacher extends Employee implements Teachable {
     }
 
     public boolean isCurator() {
+        System.out.print("Am I curator? - ");
         return isCurator;
     }
 
@@ -41,9 +43,23 @@ public class Teacher extends Employee implements Teachable {
         isCurator = true;
     }
 
+    public boolean addGradeToStudent(Course course, Student student, Float newGrade) {
+        if(course.getTeacherOfLectures().equals(this) && student.getCourses().contains(course)
+                || course.getTeacherOfPractices().equals(this) && student.getCourses().contains(course)) {
+            return student.addGrade(course, newGrade);
+        } else {
+            return false;
+        }
+    }
+
     @Override
     public boolean isTeachable() {
-        System.out.println("Yes, I'm a teacher.");
+        System.out.print("Am I teacher? - ");
         return true;
+    }
+
+    @Override
+    public String toString() {
+        return this.getFirstName() + " " + this.getLastName();
     }
 }

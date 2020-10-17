@@ -1,5 +1,6 @@
 package com.nazarenko.lesson.lesson6.university.structure;
 
+import com.nazarenko.lesson.lesson6.university.lesson.Course;
 import com.nazarenko.lesson.lesson6.university.people.Staff;
 import com.nazarenko.lesson.lesson6.university.people.Student;
 import com.nazarenko.lesson.lesson6.university.people.Teacher;
@@ -13,9 +14,12 @@ public class University implements Structure {
     public static final University UNIVERSITY;
     private final String UNIVERSITY_NAME = "Royal University of Nazarenko"; // aka RUN
     private static final HashSet<Faculty> faculties = new HashSet<>();
+    private static final HashSet<Department> departments = new HashSet<>();
+    private static final HashSet<Group> groups = new HashSet<>();
     private static final ArrayList<Staff> staff = new ArrayList<>();
     private static final ArrayList<Teacher> teachers = new ArrayList<>();
     private static final ArrayList<Student> students = new ArrayList<>();
+    private static final HashSet<Course> courses = new HashSet<>();
 
     /**
     * A private Constructor prevents any other class from
@@ -41,11 +45,49 @@ public class University implements Structure {
         faculties.add(newFaculty);
     }
 
+    public static HashSet<Faculty> getFaculties() {
+        return faculties;
+    }
+
     private String[] listOfFacultiesOfUniversity() {
         String[] print = new String[faculties.size()];
         int id = 0;
         for (Faculty faculty : faculties) {
             print[id] = ++id + ". " + faculty.getFacultyName();
+        }
+        return print;
+    }
+
+    static void addDepartmentToUniversity(Department newDepartment) {
+        departments.add(newDepartment);
+    }
+
+    public static HashSet<Department> getDepartments() {
+        return departments;
+    }
+
+    private String[] listOfDepartmentsOfUniversity() {
+        String[] print = new String[departments.size()];
+        int id = 0;
+        for (Department department : departments) {
+            print[id] = ++id + ". " + department.getDepartmentName();
+        }
+        return print;
+    }
+
+    static void addGroupToUniversity(Group newGroup) {
+        groups.add(newGroup);
+    }
+
+    public static HashSet<Group> getGroups() {
+        return groups;
+    }
+
+    private String[] listOfGroupsOfUniversity() {
+        String[] print = new String[groups.size()];
+        int id = 0;
+        for (Group group : groups) {
+            print[id] = ++id + ". " + group.getGroupName();
         }
         return print;
     }
@@ -76,6 +118,10 @@ public class University implements Structure {
         return print;
     }
 
+    public static ArrayList<Teacher> getTeachers() {
+        return teachers;
+    }
+
     public static void addStudentsToUniversity(Student newStudent) {
         students.add(newStudent);
     }
@@ -89,13 +135,33 @@ public class University implements Structure {
         return print;
     }
 
+    public static void addCourseToUniversity(Course newCourse) {
+        courses.add(newCourse);
+    }
+
+    public static HashSet<Course> getCourses() {
+        return courses;
+    }
+
+    private String[] listOfCoursesOfUniversity() {
+        String[] print = new String[courses.size()];
+        int id = 0;
+        for (Course course : courses) {
+            print[id] = ++id + ". " + course.getCOURSE_NAME();
+        }
+        return print;
+    }
+
     @Override
     public void printStructure() {
-        System.out.println("Faculties of " + getUniversityName() + ":\n" +
-                " " + Arrays.toString(UNIVERSITY.listOfFacultiesOfUniversity()) + "\n" +
-                "Students: " + Arrays.toString(UNIVERSITY.listOfStudentsOfUniversity()) + "\n" +
-                "Teachers: " + Arrays.toString(UNIVERSITY.listOfTeachersOfUniversity()) + "\n" +
-                "Staff: " + Arrays.toString(UNIVERSITY.listOfStaffOfUniversity()));
+        System.out.println(getUniversityName() + " structure: \n" +
+                "   Faculties: " + Arrays.toString(UNIVERSITY.listOfFacultiesOfUniversity()) + "\n" +
+                "   Departments: " + Arrays.toString(UNIVERSITY.listOfDepartmentsOfUniversity()) + "\n" +
+                "   Groups: " + Arrays.toString(UNIVERSITY.listOfGroupsOfUniversity()) + "\n" +
+                "   Students: " + Arrays.toString(UNIVERSITY.listOfStudentsOfUniversity()) + "\n" +
+                "   Teachers: " + Arrays.toString(UNIVERSITY.listOfTeachersOfUniversity()) + "\n" +
+                "   Staff: " + Arrays.toString(UNIVERSITY.listOfStaffOfUniversity()) + "\n" +
+                "   Courses: " + Arrays.toString(UNIVERSITY.listOfCoursesOfUniversity()));
     }
 
     @Override

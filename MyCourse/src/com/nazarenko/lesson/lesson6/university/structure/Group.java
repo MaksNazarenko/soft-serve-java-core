@@ -1,20 +1,23 @@
 package com.nazarenko.lesson.lesson6.university.structure;
 
+import com.nazarenko.lesson.lesson6.university.lesson.Course;
 import com.nazarenko.lesson.lesson6.university.people.Student;
 import com.nazarenko.lesson.lesson6.university.people.Teacher;
 
 import java.util.Arrays;
-import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.Objects;
 
 public class Group implements Structure {
     private final String GROUP_NAME;
-    private final ArrayList<Student> students = new ArrayList<>();
+    private final HashSet<Student> STUDENTS = new HashSet<>();
     private Teacher groupCurator;
+    private HashSet<Course> courses = new HashSet<>();
 
     public Group(String groupName, Department departmentOfGroup) {
         this.GROUP_NAME = groupName;
         departmentOfGroup.addGroupToDepartment(this);
+        University.addGroupToUniversity(this);
     }
 
     String getGroupName() {
@@ -22,7 +25,7 @@ public class Group implements Structure {
     }
 
     public void addStudentToGroup(Student newStudent) {
-        this.students.add(newStudent);
+        this.STUDENTS.add(newStudent);
         newStudent.setGroup(this);
     }
 
@@ -31,15 +34,31 @@ public class Group implements Structure {
         teacher.setCurator();
     }
 
-    private Teacher getGroupCurator() {
+    public Teacher getGroupCurator() {
         return groupCurator;
     }
 
     private String[] listOfStudentsOfGroup() {
-        String[] print = new String[students.size()];
+        String[] print = new String[STUDENTS.size()];
         int id = 0;
-        for (Student student : students) {
+        for (Student student : STUDENTS) {
             print[id] = ++id + ". " + student.getFirstName();
+        }
+        return print;
+    }
+
+    public void addCourseToGroup(Course newCourse) {
+        this.courses.add(newCourse);
+        for (Student student : STUDENTS) {
+            student.addCourseToStudent(newCourse);
+        }
+    }
+
+    private String[] listOfCoursesOfGroup() {
+        String[] print = new String[courses.size()];
+        int id = 0;
+        for (Course course : courses) {
+            print[id] = ++id + ". " + course.getCOURSE_NAME();
         }
         return print;
     }
@@ -47,16 +66,13 @@ public class Group implements Structure {
     @Override
     public void printStructure() {
         System.out.println("Curator of " + getGroupName() + " is: " + getGroupCurator() + ", students: \n" +
-                "  " + Arrays.toString(listOfStudentsOfGroup()));
+                "  " + Arrays.toString(listOfStudentsOfGroup()) + "\n" +
+                "courses: " + Arrays.toString(listOfCoursesOfGroup()));
     }
 
     @Override
     public String toString() {
-        return "Group{" +
-                "GROUP_NAME='" + GROUP_NAME + '\'' +
-                ", students=" + students +
-                ", groupCurator=" + groupCurator +
-                '}';
+        return GROUP_NAME;
     }
 
     @Override
@@ -65,13 +81,13 @@ public class Group implements Structure {
         if (o == null || getClass() != o.getClass()) return false;
         Group group = (Group) o;
         return GROUP_NAME.equals(group.GROUP_NAME) &&
-                students.equals(group.students) &&
+                STUDENTS.equals(group.STUDENTS) &&
                 Objects.equals(groupCurator, group.groupCurator);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(GROUP_NAME, students, groupCurator);
+        return Objects.hash(GROUP_NAME);
     }
 
 }
