@@ -1,7 +1,7 @@
-package com.nazarenko.lesson.lesson6.university.lesson;
+package com.nazarenko.project.university.lesson;
 
-import com.nazarenko.lesson.lesson6.university.people.Teacher;
-import com.nazarenko.lesson.lesson6.university.structure.University;
+import com.nazarenko.project.university.people.Teacher;
+import com.nazarenko.project.university.structure.University;
 
 import java.util.Objects;
 

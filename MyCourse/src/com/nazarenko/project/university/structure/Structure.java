@@ -1,4 +1,4 @@
-package com.nazarenko.lesson.lesson6.university.structure;
+package com.nazarenko.project.university.structure;
 
 public interface Structure {
     void printStructure();

@@ -1,20 +1,20 @@
-package com.nazarenko.lesson.lesson6.university;
+package com.nazarenko.project.university;
 
-import com.nazarenko.lesson.lesson6.university.screator.InstanceCreator;
-import com.nazarenko.lesson.lesson6.university.lesson.Course;
-import com.nazarenko.lesson.lesson6.university.lesson.LessonsList;
-import com.nazarenko.lesson.lesson6.university.people.AcademicRank;
-import com.nazarenko.lesson.lesson6.university.people.Staff;
-import com.nazarenko.lesson.lesson6.university.people.Student;
-import com.nazarenko.lesson.lesson6.university.people.Teacher;
-import com.nazarenko.lesson.lesson6.university.screator.MyScanner;
-import com.nazarenko.lesson.lesson6.university.structure.Department;
-import com.nazarenko.lesson.lesson6.university.structure.Faculty;
-import com.nazarenko.lesson.lesson6.university.structure.Group;
+import com.nazarenko.project.university.screator.InstanceCreator;
+import com.nazarenko.project.university.lesson.Course;
+import com.nazarenko.project.university.lesson.LessonsList;
+import com.nazarenko.project.university.people.AcademicRank;
+import com.nazarenko.project.university.people.Staff;
+import com.nazarenko.project.university.people.Student;
+import com.nazarenko.project.university.people.Teacher;
+import com.nazarenko.project.university.screator.MyScanner;
+import com.nazarenko.project.university.structure.Department;
+import com.nazarenko.project.university.structure.Faculty;
+import com.nazarenko.project.university.structure.Group;
 
 import java.time.LocalDate;
 
-import static com.nazarenko.lesson.lesson6.university.structure.University.UNIVERSITY;
+import static com.nazarenko.project.university.structure.University.UNIVERSITY;
 
 public class MyUniversity {
 
@@ -63,7 +63,7 @@ public class MyUniversity {
             } else if(operation == 8) {
                 InstanceCreator.createCourse();
             } else if(operation == 9) {
-                
+
             }
             else if(operation == 0) {
                 break;

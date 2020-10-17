@@ -1,9 +1,9 @@
-package com.nazarenko.lesson.lesson6.university.structure;
+package com.nazarenko.project.university.structure;
 
-import com.nazarenko.lesson.lesson6.university.lesson.Course;
-import com.nazarenko.lesson.lesson6.university.people.Staff;
-import com.nazarenko.lesson.lesson6.university.people.Student;
-import com.nazarenko.lesson.lesson6.university.people.Teacher;
+import com.nazarenko.project.university.lesson.Course;
+import com.nazarenko.project.university.people.Staff;
+import com.nazarenko.project.university.people.Student;
+import com.nazarenko.project.university.people.Teacher;
 
 import java.util.ArrayList;
 import java.util.Arrays;

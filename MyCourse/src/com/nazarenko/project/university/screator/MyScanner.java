@@ -1,4 +1,4 @@
-package com.nazarenko.lesson.lesson6.university.screator;
+package com.nazarenko.project.university.screator;
 
 import java.time.LocalDate;
 import java.util.Scanner;

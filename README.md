@@ -22,4 +22,6 @@ Group: Dp-P028
     * [Task](https://github.com/MaksNazarenko/soft-serve-java-core/tree/master/MyCourse/src/com/nazarenko/lesson/lesson_5/task_1)
     * [Home work](https://github.com/MaksNazarenko/soft-serve-java-core/tree/master/MyCourse/src/com/nazarenko/lesson/lesson_5/homework1)
 * [Lesson 6] **OOP. Inheritance**
-    * [Humans, Employees...](https://github.com/MaksNazarenko/soft-serve-java-core/tree/master/MyCourse/src/com/nazarenko/lesson/lesson_6/humans)
+    *
+* [Project] **University**
+    * [Royal University of Nazarenko](https://github.com/MaksNazarenko/soft-serve-java-core/tree/master/MyCourse/src/com/nazarenko/project/university)

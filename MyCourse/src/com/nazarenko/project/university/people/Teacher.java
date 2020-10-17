@@ -1,11 +1,9 @@
-package com.nazarenko.lesson.lesson6.university.people;
+package com.nazarenko.project.university.people;
 
-import com.nazarenko.lesson.lesson6.university.lesson.Course;
-import com.nazarenko.lesson.lesson6.university.structure.Group;
-import com.nazarenko.lesson.lesson6.university.structure.University;
+import com.nazarenko.project.university.lesson.Course;
+import com.nazarenko.project.university.structure.University;
 
 import java.time.LocalDate;
-import java.util.ArrayList;
 
 public class Teacher extends Employee implements Teachable {
     private AcademicRank academicRank;

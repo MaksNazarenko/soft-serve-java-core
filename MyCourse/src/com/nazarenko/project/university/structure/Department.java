@@ -1,6 +1,4 @@
-package com.nazarenko.lesson.lesson6.university.structure;
-
-import com.nazarenko.lesson.lesson6.university.people.Student;
+package com.nazarenko.project.university.structure;
 
 import java.util.Arrays;
 import java.util.HashSet;
