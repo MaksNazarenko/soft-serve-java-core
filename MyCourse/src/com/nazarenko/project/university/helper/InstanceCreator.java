@@ -1,4 +1,4 @@
-package com.nazarenko.project.university.screator;
+package com.nazarenko.project.university.helper;
 
 import com.nazarenko.project.university.lesson.Course;
 import com.nazarenko.project.university.lesson.LessonsList;
@@ -111,7 +111,6 @@ public abstract class InstanceCreator {
         LessonsList lessonName = LessonsList.valueOf(lessonString); //todo add exception handler for enum
         System.out.print("Write SSN of lecturer: \n> ");
         Long lecturesSSN = MyScanner.scanLong();
-        MyScanner.scanEmptyEater();
 
         ArrayList<Teacher> teachers = University.getTeachers();
         for (Teacher teacher : teachers) {

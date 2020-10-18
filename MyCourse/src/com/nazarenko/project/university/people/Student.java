@@ -62,7 +62,7 @@ public class Student extends Human implements Teachable {
     public boolean sortGradesInCourse(Course course, String order) {
         ArrayList<Float> toSort = grades.get(course);
         int arrSize = toSort.size();
-        if (order.equals("ascending")) {
+        if (order.equals("ascending") || order.equals("increasing") ) {
             for(int i = 1; i < arrSize; i++) {
                 for(int j = 0; j < arrSize; j++) {
                     Float tmp;
@@ -73,7 +73,7 @@ public class Student extends Human implements Teachable {
                     }
                 }
             }
-        } else if (order.equals("descending")) {
+        } else if (order.equals("descending") || order.equals("decreasing")) {
             for(int i = 1; i < arrSize; i++) {
                 for(int j = 0; j < arrSize; j++) {
                     Float tmp;

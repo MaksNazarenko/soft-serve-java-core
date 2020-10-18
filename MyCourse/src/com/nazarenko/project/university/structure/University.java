@@ -113,7 +113,7 @@ public class University implements Structure {
         String[] print = new String[teachers.size()];
         int id = 0;
         for (Teacher teacher : teachers) {
-            print[id] = ++id + ". " + teacher.getFirstName() + " " + teacher.getLastName() + " (" + teacher.getAcademicRank() + ", SSN: " + teacher.getSOCIAL_SECURITY_NUMBER() + ")";
+            print[id] = ++id + ". " + teacher.getFirstName() + " " + teacher.getLastName() + " (Academic rank:" + teacher.getAcademicRank() + ", SSN: " + teacher.getSOCIAL_SECURITY_NUMBER() + ")";
         }
         return print;
     }
@@ -133,6 +133,10 @@ public class University implements Structure {
             print[id] = ++id + ". " + student.getFirstName() + " " + student.getLastName() + " (id: " + student.getStudentId() + ", SSN: " + student.getSOCIAL_SECURITY_NUMBER() + ")";
         }
         return print;
+    }
+
+    public static ArrayList<Student> getStudents() {
+        return students;
     }
 
     public static void addCourseToUniversity(Course newCourse) {
