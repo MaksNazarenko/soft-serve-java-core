@@ -12,7 +12,7 @@ import java.util.Objects;
 
 public class University {
     public static final University UNIVERSITY;
-    private final String UNIVERSITY_NAME = "Royal University of Nazarenko";
+    private static final String UNIVERSITY_NAME = "Royal University of Nazarenko";
     private static final HashSet<Faculty> faculties = new HashSet<>();
     private static final HashSet<Department> departments = new HashSet<>();
     private static final HashSet<Group> groups = new HashSet<>();
@@ -37,7 +37,7 @@ public class University {
         UNIVERSITY = new University();
     }
 
-    private String getUniversityName() {
+    public static String getUniversityName() {
         return UNIVERSITY_NAME;
     }
 
@@ -49,7 +49,7 @@ public class University {
         return faculties;
     }
 
-    private String[] listOfFacultiesOfUniversity() {
+    public static String[] listOfFacultiesOfUniversity() {
         String[] print = new String[faculties.size()];
         int id = 0;
         for (Faculty faculty : faculties) {
@@ -66,7 +66,7 @@ public class University {
         return departments;
     }
 
-    private String[] listOfDepartmentsOfUniversity() {
+    public static String[] listOfDepartmentsOfUniversity() {
         String[] print = new String[departments.size()];
         int id = 0;
         for (Department department : departments) {
@@ -83,7 +83,7 @@ public class University {
         return groups;
     }
 
-    private String[] listOfGroupsOfUniversity() {
+    public static String[] listOfGroupsOfUniversity() {
         String[] print = new String[groups.size()];
         int id = 0;
         for (Group group : groups) {
@@ -96,7 +96,7 @@ public class University {
         staff.add(newStaff);
     }
 
-    private String[] listOfStaffOfUniversity() {
+    public static String[] listOfStaffOfUniversity() {
         String[] print = new String[staff.size()];
         int id = 0;
         for (Staff staff : staff) {
@@ -109,7 +109,7 @@ public class University {
         teachers.add(newTeacher);
     }
 
-    private String[] listOfTeachersOfUniversity() {
+    public static String[] listOfTeachersOfUniversity() {
         String[] print = new String[teachers.size()];
         int id = 0;
         for (Teacher teacher : teachers) {
@@ -126,7 +126,7 @@ public class University {
         students.add(newStudent);
     }
 
-    private String[] listOfStudentsOfUniversity() {
+    public static String[] listOfStudentsOfUniversity() {
         String[] print = new String[students.size()];
         int id = 0;
         for (Student student : students) {
@@ -147,7 +147,7 @@ public class University {
         return courses;
     }
 
-    private String[] listOfCoursesOfUniversity() {
+    public static String[] listOfCoursesOfUniversity() {
         String[] print = new String[courses.size()];
         int id = 0;
         for (Course course : courses) {
@@ -156,16 +156,7 @@ public class University {
         return print;
     }
 
-    public void printStructure() {
-        System.out.println(getUniversityName() + " structure: \n" +
-                "   Faculties: " + Arrays.toString(UNIVERSITY.listOfFacultiesOfUniversity()) + "\n" +
-                "   Departments: " + Arrays.toString(UNIVERSITY.listOfDepartmentsOfUniversity()) + "\n" +
-                "   Groups: " + Arrays.toString(UNIVERSITY.listOfGroupsOfUniversity()) + "\n" +
-                "   Students: " + Arrays.toString(UNIVERSITY.listOfStudentsOfUniversity()) + "\n" +
-                "   Teachers: " + Arrays.toString(UNIVERSITY.listOfTeachersOfUniversity()) + "\n" +
-                "   Staff: " + Arrays.toString(UNIVERSITY.listOfStaffOfUniversity()) + "\n" +
-                "   Courses: " + Arrays.toString(UNIVERSITY.listOfCoursesOfUniversity()));
-    }
+
 
     @Override
     public String toString() {
