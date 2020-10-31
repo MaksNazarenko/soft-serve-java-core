@@ -22,13 +22,8 @@ public class Department {
         this.groups.add(newGroup);
     }
 
-    public String[] listOfGroupsOfDepartment() {
-        String[] print = new String[groups.size()];
-        int id = 0;
-        for (Group group : groups) {
-            print[id] = ++id + ". " + group.getGroupName();
-        }
-        return print;
+    public HashSet<Group> getGroups() {
+        return groups;
     }
 
     @Override

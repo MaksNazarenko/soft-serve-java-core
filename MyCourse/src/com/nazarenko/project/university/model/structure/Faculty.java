@@ -21,15 +21,6 @@ public class Faculty {
         this.departments.add(newDepartment);
     }
 
-    public String[] listOfDepartmentsOfFaculty() {
-        String[] print = new String[departments.size()];
-        int id = 0;
-        for (Department department : departments) {
-            print[id] = ++id + ". " + department.getDepartmentName();
-        }
-        return print;
-    }
-
     public HashSet<Department> getDepartments() {
         return departments;
     }
