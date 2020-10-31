@@ -20,7 +20,7 @@ public class Group {
         University.addGroupToUniversity(this);
     }
 
-    String getGroupName() {
+    public String getGroupName() {
         return this.GROUP_NAME;
     }
 
@@ -38,7 +38,7 @@ public class Group {
         return groupCurator;
     }
 
-    private String[] listOfStudentsOfGroup() {
+    public String[] listOfStudentsOfGroup() {
         String[] print = new String[STUDENTS.size()];
         int id = 0;
         for (Student student : STUDENTS) {
@@ -54,19 +54,13 @@ public class Group {
         }
     }
 
-    private String[] listOfCoursesOfGroup() {
+    public String[] listOfCoursesOfGroup() {
         String[] print = new String[courses.size()];
         int id = 0;
         for (Course course : courses) {
             print[id] = ++id + ". " + course.getCOURSE_NAME();
         }
         return print;
-    }
-
-    public void printStructure() {
-        System.out.println("Curator of " + getGroupName() + " is: " + getGroupCurator() + ", students: \n" +
-                "  " + Arrays.toString(listOfStudentsOfGroup()) + "\n" +
-                "courses: " + Arrays.toString(listOfCoursesOfGroup()));
     }
 
     @Override
