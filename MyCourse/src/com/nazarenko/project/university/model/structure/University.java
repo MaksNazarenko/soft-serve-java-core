@@ -10,9 +10,9 @@ import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Objects;
 
-public class University implements Structure { //todo make enum
+public class University {
     public static final University UNIVERSITY;
-    private final String UNIVERSITY_NAME = "Royal University of Nazarenko"; // aka RUN
+    private final String UNIVERSITY_NAME = "Royal University of Nazarenko";
     private static final HashSet<Faculty> faculties = new HashSet<>();
     private static final HashSet<Department> departments = new HashSet<>();
     private static final HashSet<Group> groups = new HashSet<>();
@@ -156,7 +156,6 @@ public class University implements Structure { //todo make enum
         return print;
     }
 
-    @Override
     public void printStructure() {
         System.out.println(getUniversityName() + " structure: \n" +
                 "   Faculties: " + Arrays.toString(UNIVERSITY.listOfFacultiesOfUniversity()) + "\n" +

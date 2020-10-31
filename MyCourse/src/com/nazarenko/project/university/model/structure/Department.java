@@ -4,7 +4,7 @@ import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Objects;
 
-public class Department implements Structure {
+public class Department {
     private final String DEPARTMENT_NAME;
     private final HashSet<Group> groups = new HashSet<>();
 
@@ -31,7 +31,6 @@ public class Department implements Structure {
         return print;
     }
 
-    @Override
     public void printStructure() {
         System.out.println("Groups of " + getDepartmentName() + ":\n" +
                 " " + Arrays.toString(listOfGroupsOfDepartment()));

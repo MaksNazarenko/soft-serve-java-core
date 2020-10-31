@@ -8,7 +8,7 @@ import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Objects;
 
-public class Group implements Structure {
+public class Group {
     private final String GROUP_NAME;
     private final HashSet<Student> STUDENTS = new HashSet<>();
     private Teacher groupCurator;
@@ -63,7 +63,6 @@ public class Group implements Structure {
         return print;
     }
 
-    @Override
     public void printStructure() {
         System.out.println("Curator of " + getGroupName() + " is: " + getGroupCurator() + ", students: \n" +
                 "  " + Arrays.toString(listOfStudentsOfGroup()) + "\n" +

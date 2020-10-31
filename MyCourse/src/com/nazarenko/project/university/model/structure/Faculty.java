@@ -4,7 +4,7 @@ import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Objects;
 
-public class Faculty implements Structure {
+public class Faculty {
     private final String FACULTY_NAME;
     private final HashSet<Department> departments = new HashSet<>();
 
@@ -34,7 +34,6 @@ public class Faculty implements Structure {
         return departments;
     }
 
-    @Override
     public void printStructure() {
         System.out.println("Departments of " + getFacultyName() + ":\n" +
                 " " + Arrays.toString(listOfDepartmentsOfFaculty()));
