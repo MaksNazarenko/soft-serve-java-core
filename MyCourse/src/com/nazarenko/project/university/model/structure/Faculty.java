@@ -21,7 +21,7 @@ public class Faculty {
         this.departments.add(newDepartment);
     }
 
-    private String[] listOfDepartmentsOfFaculty() {
+    public String[] listOfDepartmentsOfFaculty() {
         String[] print = new String[departments.size()];
         int id = 0;
         for (Department department : departments) {
@@ -34,10 +34,7 @@ public class Faculty {
         return departments;
     }
 
-    public void printStructure() {
-        System.out.println("Departments of " + getFacultyName() + ":\n" +
-                " " + Arrays.toString(listOfDepartmentsOfFaculty()));
-    }
+
 
     @Override
     public String toString() {
