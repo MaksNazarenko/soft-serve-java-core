@@ -13,20 +13,22 @@ import com.nazarenko.project.university.structure.University;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.HashMap;
 import java.util.HashSet;
 
 public abstract class InstanceCreator {
 
     public static Student createStudent(){
-        System.out.print("Write student's first name: \n> ");
-        String firstName = MyScanner.scanLine();
-        System.out.print("Write student's last name: \n> ");
-        String lastName = MyScanner.scanLine();
+//        System.out.print("Write student's first name: \n> ");
+//        String firstName = MyScanner.scanLine();
+//        System.out.print("Write student's last name: \n> ");
+//        String lastName = MyScanner.scanLine();
+//        System.out.print("Country of birth: \n> ");
+//        String countryOfBirth = MyScanner.scanLine();
+        HashMap<String, String> info = InstanceCreator.getInfoFromConsole("student");
         System.out.print("Date of birth [yyyy-mm-dd]: \n> ");
         LocalDate dateOfBirth = MyScanner.scanDate();
-        System.out.print("Country of birth: \n> ");
-        String countryOfBirth = MyScanner.scanLine();
-        return new Student(firstName, lastName, dateOfBirth, countryOfBirth);
+        return new Student(info.get("firstName"), info.get("lastName"), dateOfBirth, info.get("countryOfBirth"));
     }
 
     public static Teacher createTeacher(){
@@ -61,6 +63,17 @@ public abstract class InstanceCreator {
         System.out.print("Profession name: \n> ");
         String professionName = MyScanner.scanLine();
         return new Staff(firstName, lastName, dateOfBirth, countryOfBirth, hireDate, salaryRate, professionName);
+    }
+
+    private static HashMap<String, String> getInfoFromConsole(String arg) {
+        HashMap<String, String> humanInfo = new HashMap<>();
+        System.out.print("Write " + arg + "'s first name: \n> ");
+        humanInfo.put("firstName", MyScanner.scanLine());
+        System.out.print("Write " + arg + "'s last name: \n> ");
+        humanInfo.put("lastName", MyScanner.scanLine());
+        System.out.print("Country of birth: \n> ");
+        humanInfo.put("countryOfBirth", MyScanner.scanLine());
+        return humanInfo;
     }
 
     public static Faculty createFaculty(){

@@ -11,7 +11,7 @@ public class Course {
     private Teacher teacherOfLectures;
     private Teacher teacherOfPractices;
 
-    public Course(String COURSE_NAME, LessonsList LESSON_NAME, Teacher teacherOfLectures){
+    public Course(String COURSE_NAME, LessonsList LESSON_NAME, Teacher teacherOfLectures) {
         this.COURSE_NAME = COURSE_NAME;
         this.LESSON_NAME = LESSON_NAME;
         this.teacherOfLectures = teacherOfLectures;

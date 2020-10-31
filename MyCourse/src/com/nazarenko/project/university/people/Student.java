@@ -41,7 +41,7 @@ public class Student extends Human implements Teachable {
 
     boolean addGrade(Course course, Float newGrade) {
         ArrayList<Float> gradesByCourse = this.grades.get(course);
-        if(gradesByCourse == null) {
+        if (gradesByCourse == null) {
             gradesByCourse = new ArrayList<Float>();
             gradesByCourse.add(newGrade);
         } else {
@@ -62,9 +62,9 @@ public class Student extends Human implements Teachable {
     public boolean sortGradesInCourse(Course course, String order) {
         ArrayList<Float> toSort = grades.get(course);
         int arrSize = toSort.size();
-        if (order.equals("ascending") || order.equals("increasing") ) {
-            for(int i = 1; i < arrSize; i++) {
-                for(int j = 0; j < arrSize; j++) {
+        if (order.equals("ascending") || order.equals("increasing")) {
+            for (int i = 1; i < arrSize; i++) {
+                for (int j = 0; j < arrSize; j++) {
                     Float tmp;
                     if (toSort.get(j) > toSort.get(i)) {
                         tmp = toSort.get(j);
@@ -74,8 +74,8 @@ public class Student extends Human implements Teachable {
                 }
             }
         } else if (order.equals("descending") || order.equals("decreasing")) {
-            for(int i = 1; i < arrSize; i++) {
-                for(int j = 0; j < arrSize; j++) {
+            for (int i = 1; i < arrSize; i++) {
+                for (int j = 0; j < arrSize; j++) {
                     Float tmp;
                     if (toSort.get(j) < toSort.get(i)) {
                         tmp = toSort.get(j);
@@ -92,12 +92,12 @@ public class Student extends Human implements Teachable {
         return true;
     }
 
-    public void printAllGrades(){
+    public void printAllGrades() {
         System.out.print(this.getFirstName() + " " + this.getLastName() + "' grades: ");
         System.out.println(this.getGrades());
     }
 
-    public void printGradesOfCourse(Course course){
+    public void printGradesOfCourse(Course course) {
         System.out.print(this.getFirstName() + " " + this.getLastName() + "' grades of " + course.getCOURSE_NAME() + ": ");
         System.out.println(this.getGrades(course));
     }
@@ -108,7 +108,7 @@ public class Student extends Human implements Teachable {
 
     @Override
     public boolean isTeachable() {
-        System.out.println("Yes, I'm a student.");
+//        System.out.println("Yes, I'm a student.");
         return true;
     }
 

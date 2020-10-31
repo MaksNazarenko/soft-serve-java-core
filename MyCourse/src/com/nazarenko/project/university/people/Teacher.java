@@ -33,7 +33,7 @@ public class Teacher extends Employee implements Teachable {
     }
 
     public boolean isCurator() {
-        System.out.print("Am I curator? - ");
+//        System.out.print("Am I curator? - ");
         return isCurator;
     }
 
@@ -52,7 +52,7 @@ public class Teacher extends Employee implements Teachable {
 
     @Override
     public boolean isTeachable() {
-        System.out.print("Am I teacher? - ");
+//        System.out.print("Am I teacher? - ");
         return true;
     }
 

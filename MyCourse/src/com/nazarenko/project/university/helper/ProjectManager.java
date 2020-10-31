@@ -1,5 +1,7 @@
 package com.nazarenko.project.university.helper;
 
+import com.nazarenko.project.university.structure.University;
+
 import static com.nazarenko.project.university.structure.University.UNIVERSITY;
 
 public abstract class ProjectManager {

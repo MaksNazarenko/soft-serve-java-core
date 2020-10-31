@@ -10,7 +10,7 @@ import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Objects;
 
-public class University implements Structure {
+public class University implements Structure { //todo make enum
     public static final University UNIVERSITY;
     private final String UNIVERSITY_NAME = "Royal University of Nazarenko"; // aka RUN
     private static final HashSet<Faculty> faculties = new HashSet<>();
