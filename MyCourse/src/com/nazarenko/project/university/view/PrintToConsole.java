@@ -1,5 +1,6 @@
 package com.nazarenko.project.university.view;
 
+import com.nazarenko.project.university.model.structure.Department;
 import com.nazarenko.project.university.model.structure.Faculty;
 import com.nazarenko.project.university.model.structure.University;
 
@@ -21,6 +22,11 @@ public class PrintToConsole {
     public void printFacultyStructure(Faculty faculty) {
         System.out.println("Departments of " + faculty.getFacultyName() + ":\n" +
                 " " + Arrays.toString(faculty.listOfDepartmentsOfFaculty()));
+    }
+
+    public void printDepartmentStructure(Department department) {
+        System.out.println("Groups of " + department.getDepartmentName() + ":\n" +
+                " " + Arrays.toString(department.listOfGroupsOfDepartment()));
     }
 
 }
