@@ -1,5 +1,6 @@
 package com.nazarenko.project.university.model.structure;
 
+import com.nazarenko.project.university.controller.structure.UniversityController;
 import com.nazarenko.project.university.model.lesson.Course;
 import com.nazarenko.project.university.model.people.Student;
 import com.nazarenko.project.university.model.people.Teacher;
@@ -16,7 +17,7 @@ public class Group {
     public Group(String groupName, Department departmentOfGroup) {
         this.GROUP_NAME = groupName;
         departmentOfGroup.addGroupToDepartment(this);
-        University.addGroupToUniversity(this);
+        UniversityController.addGroupToUniversity(this);
     }
 
     public String getGroupName() {

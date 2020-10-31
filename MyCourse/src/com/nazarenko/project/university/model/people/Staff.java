@@ -1,5 +1,6 @@
 package com.nazarenko.project.university.model.people;
 
+import com.nazarenko.project.university.controller.structure.UniversityController;
 import com.nazarenko.project.university.model.structure.University;
 
 import java.time.LocalDate;
@@ -11,7 +12,7 @@ public class Staff extends Employee {
                  LocalDate hireDate, float salaryRate, String professionName) {
         super(firstName, lastName, dateOfBirth, countryOfBirth, hireDate, salaryRate);
         this.professionName = professionName;
-        University.addStaffToUniversity(this);
+        UniversityController.addStaffToUniversity(this);
     }
 
     public String getProfessionName() {

@@ -1,5 +1,6 @@
 package com.nazarenko.project.university.model.lesson;
 
+import com.nazarenko.project.university.controller.structure.UniversityController;
 import com.nazarenko.project.university.model.people.Teacher;
 import com.nazarenko.project.university.model.structure.University;
 
@@ -15,7 +16,7 @@ public class Course {
         this.COURSE_NAME = COURSE_NAME;
         this.LESSON_NAME = LESSON_NAME;
         this.teacherOfLectures = teacherOfLectures;
-        University.addCourseToUniversity(this);
+        UniversityController.addCourseToUniversity(this);
     }
 
     public void setTeacherOfLectures(Teacher teacherOfLectures) {

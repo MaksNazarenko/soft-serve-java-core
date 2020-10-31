@@ -1,5 +1,6 @@
 package com.nazarenko.project.university.model.people;
 
+import com.nazarenko.project.university.controller.structure.UniversityController;
 import com.nazarenko.project.university.model.lesson.Course;
 import com.nazarenko.project.university.model.structure.University;
 
@@ -13,7 +14,7 @@ public class Teacher extends Employee implements Teachable {
                     LocalDate hireDate, float salaryRate) {
         super(firstName, lastName, dateOfBirth, countryOfBirth,
                 hireDate, salaryRate);
-        University.addTeacherToUniversity(this);
+        UniversityController.addTeacherToUniversity(this);
     }
 
     public Teacher (String firstName, String lastName, LocalDate dateOfBirth, String countryOfBirth,
@@ -21,7 +22,7 @@ public class Teacher extends Employee implements Teachable {
         super(firstName, lastName, dateOfBirth, countryOfBirth,
                 hireDate, salaryRate);
         this.academicRank = academicRank;
-        University.addTeacherToUniversity(this);
+        UniversityController.addTeacherToUniversity(this);
     }
 
     public AcademicRank getAcademicRank() {

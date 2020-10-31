@@ -1,6 +1,8 @@
 package com.nazarenko.project.university.controller;
 
+import com.nazarenko.project.university.controller.structure.UniversityController;
 import com.nazarenko.project.university.view.PrintToConsole;
+import com.nazarenko.project.university.view.UniversityView;
 
 public abstract class ProjectManager {
 
@@ -25,7 +27,7 @@ public abstract class ProjectManager {
             System.out.print(CONTROL_PANEL);
             int operation = MyScanner.scanInt();
             if (operation == 1) {
-                PrintToConsole.printUniversityStructure();
+                UniversityController.updateView();
             } else if(operation == 2) {
                 InstanceCreator.createFaculty();
             } else if(operation == 3) {

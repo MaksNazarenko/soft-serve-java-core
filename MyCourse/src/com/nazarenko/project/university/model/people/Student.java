@@ -1,5 +1,6 @@
 package com.nazarenko.project.university.model.people;
 
+import com.nazarenko.project.university.controller.structure.UniversityController;
 import com.nazarenko.project.university.model.lesson.Course;
 import com.nazarenko.project.university.model.structure.Group;
 import com.nazarenko.project.university.model.structure.University;
@@ -20,7 +21,7 @@ public class Student extends Human implements Teachable {
     public Student(String firstName, String lastName, LocalDate dateOfBirth, String countryOfBirth) {
         super(firstName, lastName, dateOfBirth, countryOfBirth);
         this.studentId = ++countOfStudents;
-        University.addStudentsToUniversity(this);
+        UniversityController.addStudentsToUniversity(this);
     }
 
     public void setGroup(Group group) {

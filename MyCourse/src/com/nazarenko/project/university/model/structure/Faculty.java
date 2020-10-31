@@ -1,6 +1,7 @@
 package com.nazarenko.project.university.model.structure;
 
-import java.util.Arrays;
+import com.nazarenko.project.university.controller.structure.UniversityController;
+
 import java.util.HashSet;
 import java.util.Objects;
 
@@ -10,7 +11,7 @@ public class Faculty {
 
     public Faculty(String facultyName) {
         this.FACULTY_NAME = facultyName;
-        University.addFacultyToUniversity(this);
+        UniversityController.addFacultyToUniversity(this);
     }
 
     public String getFacultyName() {
@@ -25,15 +26,6 @@ public class Faculty {
         return departments;
     }
 
-
-
-    @Override
-    public String toString() {
-        return "Faculty{" +
-                "FACULTY_NAME='" + FACULTY_NAME + '\'' +
-                ", departments=" + departments +
-                '}';
-    }
 
     @Override
     public boolean equals(Object o) {

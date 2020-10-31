@@ -1,5 +1,7 @@
 package com.nazarenko.project.university.model.structure;
 
+import com.nazarenko.project.university.controller.structure.UniversityController;
+
 import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Objects;
@@ -11,7 +13,7 @@ public class Department {
     public Department(String departmentName, Faculty facultyOfDepartment) {
         this.DEPARTMENT_NAME = departmentName;
         facultyOfDepartment.addDepartmentToFaculty(this);
-        University.addDepartmentToUniversity(this);
+        UniversityController.addDepartmentToUniversity(this);
     }
 
     public String getDepartmentName() {
