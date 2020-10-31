@@ -1,6 +1,6 @@
-package com.nazarenko.project.university.people;
+package com.nazarenko.project.university.model.people;
 
-import com.nazarenko.project.university.structure.University;
+import com.nazarenko.project.university.model.structure.University;
 
 import java.time.LocalDate;
 

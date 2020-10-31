@@ -1,4 +1,4 @@
-package com.nazarenko.project.university.people;
+package com.nazarenko.project.university.model.people;
 
 import java.time.LocalDate;
 

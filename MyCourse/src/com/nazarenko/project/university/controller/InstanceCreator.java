@@ -1,14 +1,14 @@
-package com.nazarenko.project.university.helper;
+package com.nazarenko.project.university.controller;
 
-import com.nazarenko.project.university.lesson.Course;
-import com.nazarenko.project.university.lesson.LessonsList;
-import com.nazarenko.project.university.people.Staff;
-import com.nazarenko.project.university.people.Student;
-import com.nazarenko.project.university.people.Teacher;
-import com.nazarenko.project.university.structure.Department;
-import com.nazarenko.project.university.structure.Faculty;
-import com.nazarenko.project.university.structure.Group;
-import com.nazarenko.project.university.structure.University;
+import com.nazarenko.project.university.model.lesson.Course;
+import com.nazarenko.project.university.model.lesson.LessonsList;
+import com.nazarenko.project.university.model.people.Staff;
+import com.nazarenko.project.university.model.people.Student;
+import com.nazarenko.project.university.model.people.Teacher;
+import com.nazarenko.project.university.model.structure.Department;
+import com.nazarenko.project.university.model.structure.Faculty;
+import com.nazarenko.project.university.model.structure.Group;
+import com.nazarenko.project.university.model.structure.University;
 
 import java.time.LocalDate;
 import java.util.ArrayList;

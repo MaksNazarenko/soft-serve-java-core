@@ -1,8 +1,8 @@
-package com.nazarenko.project.university.helper;
+package com.nazarenko.project.university.controller;
 
-import com.nazarenko.project.university.lesson.Course;
-import com.nazarenko.project.university.people.Student;
-import com.nazarenko.project.university.people.Teacher;
+import com.nazarenko.project.university.model.lesson.Course;
+import com.nazarenko.project.university.model.people.Student;
+import com.nazarenko.project.university.model.people.Teacher;
 
 public abstract class Helper {
 

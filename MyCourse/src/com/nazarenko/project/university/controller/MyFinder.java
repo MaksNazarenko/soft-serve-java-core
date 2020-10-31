@@ -1,9 +1,9 @@
-package com.nazarenko.project.university.helper;
+package com.nazarenko.project.university.controller;
 
-import com.nazarenko.project.university.lesson.Course;
-import com.nazarenko.project.university.people.Student;
-import com.nazarenko.project.university.people.Teacher;
-import com.nazarenko.project.university.structure.University;
+import com.nazarenko.project.university.model.lesson.Course;
+import com.nazarenko.project.university.model.people.Student;
+import com.nazarenko.project.university.model.people.Teacher;
+import com.nazarenko.project.university.model.structure.University;
 
 import java.util.ArrayList;
 import java.util.HashSet;

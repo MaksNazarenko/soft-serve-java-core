@@ -1,6 +1,6 @@
-package com.nazarenko.project.university;
+package com.nazarenko.project.university.view;
 
-import com.nazarenko.project.university.helper.ProjectManager;
+import com.nazarenko.project.university.controller.ProjectManager;
 
 public class MyUniversity {
 

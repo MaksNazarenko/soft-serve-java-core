@@ -1,4 +1,4 @@
-package com.nazarenko.project.university.helper;
+package com.nazarenko.project.university.controller;
 
 import java.time.LocalDate;
 import java.util.Scanner;

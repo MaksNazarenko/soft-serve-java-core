@@ -1,4 +1,4 @@
-package com.nazarenko.project.university.lesson;
+package com.nazarenko.project.university.model.lesson;
 
 public enum LessonsList {
     PROGRAMMING, DATA_BASES, CALCULUS, STATISTICS;
