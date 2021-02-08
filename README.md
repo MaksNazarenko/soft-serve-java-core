@@ -2,6 +2,7 @@
 ### SoftServe course: Object-oriented programming. Java Core
 
 ![certificate](certificate.png)
+[Click to verify certificate](https://career.softserveinc.com/en-us/certification/verification)
 
 * [Lesson 1](https://github.com/MaksNazarenko/soft-serve-java-core/tree/master/MyCourse/src/com/nazarenko/lesson/lesson_1) **Java Core Intro**:
     * [Task](https://github.com/MaksNazarenko/soft-serve-java-core/tree/master/MyCourse/src/com/nazarenko/lesson/lesson_1/task1)
